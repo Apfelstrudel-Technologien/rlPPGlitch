@@ -15,8 +15,6 @@ out vec4 fragColor;
 void main(void) {
     vec2 uv = gl_FragCoord.xy / winRes;
 
-    uv.y = 1.0 - uv.y;
-
     float glitch = fract(uv.y * 32.0 + time * tMult) * gMult;
 
     fragColor = vec4(texture(texture0, uv - vec2(sin(time * tMult) * chromaMult + glitch * 2.0, 0.0)).r,
