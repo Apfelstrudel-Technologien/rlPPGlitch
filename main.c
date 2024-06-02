@@ -2,8 +2,7 @@
 
 #include "raylib.h"
 
-int main(void)
-{
+int main(void) {
     // Init window & camera.
     const int winW = 800;
     const int winH = 450;
